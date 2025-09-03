@@ -1,76 +1,11 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{
+    margin: 0;padding: 0;
+    font-family: Arial, Sans-Serif;
 }
 
-body{
-   background-color: #F8F4F1; 
+.container{
+    width: 2rem;
+    height: auto;
+    background-color: black;
+    color: #fff;    
 }
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background: #15151F;
-  color: #fff;
-}
-
-.navbar img{
-    max-width:100%;
-
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-}
-.navbar ul li {
-  margin-left: 20px;
-}
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-}
-
-/* Schedule */
-.schedule {
-  background: #FFFFFF;
-  padding: 20px;
-}
-.schedule .race {
-  font-size: 18px;
-}
-.schedule h2 {
-  margin-top: 5px;
-  font-size: 24px;
-  color: green;
-}
-
-/* Article */
-.article {
-  padding: 20px;
-}
-.article h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.article p {
-  margin-bottom: 5px;
-  color: #444;
-}
-.article small {
-  display: block;
-  margin-bottom: 10px;
-  color: gray;
-}
-.article img {
-  width: 100%;
-  border-radius: 10px;
-}
-
