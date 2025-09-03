@@ -12,4 +12,3 @@ Project ini dibuat untuk latihan membangun portal berita dan jadwal balapan deng
 - Footer sederhana
 - Struktur siap dikembangkan (misalnya: halaman schedule, ranking, news)
 
-# f1-clone
