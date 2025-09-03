@@ -6,20 +6,25 @@
   font-family: Arial, sans-serif;
 }
 
+body{
+   background-color: #F8F4F1; 
+}
+
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background: #111;
+  background: #15151F;
   color: #fff;
 }
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: red;
+
+.navbar img{
+    max-width:100%;
+
 }
+
 .navbar ul {
   display: flex;
   list-style: none;
@@ -35,7 +40,7 @@
 
 /* Schedule */
 .schedule {
-  background: #f5f5f5;
+  background: #FFFFFF;
   padding: 20px;
 }
 .schedule .race {
