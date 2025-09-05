@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>F1 News</title>
   <style>
-    /* Reset */
+    /* Reset dan Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -20,6 +20,7 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
+      padding: 0;
     }
 
     /* Navbar */
@@ -31,10 +32,14 @@
       background: #15151F;
       color: #fff;
       width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .navbar img {
-      max-width: 120px;
+      height: 30px;
     }
 
     .navbar ul {
@@ -50,6 +55,12 @@
       text-decoration: none;
       color: #fff;
       font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ff2800;
     }
 
     /* Container */
@@ -66,25 +77,37 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 1.5rem;
       margin-bottom: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     }
 
     .tags {
       display: flex;
       gap: 0.5rem;
       margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
 
     .tag {
       background-color: #e5e7eb;
       color: #4b5563;
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       font-weight: 600;
       padding: 0.25rem 0.75rem;
       border-radius: 0.375rem;
     }
 
     .tag.schedule {
-      background-color: #10b981;
+      background-color: #dc0000;
+      color: white;
+    }
+
+    .tag.breaking {
+      background-color: #ff2800;
       color: white;
     }
 
@@ -93,6 +116,7 @@
       font-weight: bold;
       margin-bottom: 1rem;
       line-height: 1.375;
+      color: #15151F;
     }
 
     .description {
@@ -105,12 +129,20 @@
       color: #6b7280;
       font-size: 0.875rem;
       margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .timestamp::before {
+      content: "⏱";
+      margin-right: 0.5rem;
     }
 
     .image {
       border-radius: 0.5rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       width: 100%;
+      height: 200px;
       object-fit: cover;
       margin-top: 1rem;
     }
@@ -125,11 +157,26 @@
     .schedule-date {
       font-weight: bold;
       margin-right: 0.5rem;
+      color: #15151F;
     }
 
     .schedule-location {
-      color: #10b981;
+      color: #dc0000;
       font-weight: bold;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #15151F;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
     }
 
     /* Responsive adjustments */
@@ -141,10 +188,12 @@
       
       .navbar ul {
         margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
       .navbar ul li {
-        margin: 0 10px;
+        margin: 5px 10px;
       }
       
       .container {
@@ -154,19 +203,36 @@
       .title {
         font-size: 1.25rem;
       }
+      
+      .card {
+        padding: 1rem;
+      }
+    }
+
+    /* F1 Theme Enhancements */
+    .f1-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #ff2800 0%, #15151F 30%, #ffffff 40%, #15151F 50%, #ff2800 100%);
+      margin: 1rem 0;
+      border-radius: 2px;
+    }
+
+    .f1-red {
+      color: #ff2800;
     }
   </style>
 </head>
 <body>
   <!-- HEADER -->
   <header class="navbar">
-    <img src="https://via.placeholder.com/120x40/15151F/FFFFFF/?text=F1+Logo" alt="F1 Logo" class="logo">
+    <img src="https://via.placeholder.com/120x30/FFFFFF/DC0000/?text=F1+OFFICIAL" alt="F1 Logo" class="logo">
     <nav>
       <ul>
         <li><a href="#">Schedule</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Standings</a></li>
         <li><a href="#">Drivers</a></li>
+        <li><a href="#">Teams</a></li>
       </ul>
     </nav>
   </header>
@@ -178,56 +244,105 @@
       <div class="tags">
         <span class="tag schedule">SCHEDULE</span>
         <span class="tag">ROUND 16</span>
+        <span class="tag">MONZA</span>
       </div>
       
       <div class="schedule-info">
         <span class="schedule-date">05 - 07 SEP</span>
-        <span class="schedule-location">ITALY</span>
+        <span class="schedule-location">ITALIAN GRAND PRIX</span>
       </div>
       
       <h1 class="title">Italian Grand Prix 2023</h1>
       <p class="description">The Temple of Speed awaits as F1 returns to Monza for the Italian Grand Prix, the final European round of the 2023 season.</p>
+      
+      <div class="f1-divider"></div>
+      
       <p class="timestamp">Next race weekend</p>
     </div>
 
     <!-- ARTICLE CARD -->
     <div class="card">
       <div class="tags">
+        <span class="tag breaking">BREAKING</span>
         <span class="tag">POWER RANKINGS</span>
         <span class="tag">DUTCH GP</span>
-        <span class="tag">ZANDVOORT</span>
       </div>
       
       <h1 class="title">POWER RANKINGS: WHO IMPRESSED OUR JUDGES AMID THE DRAMA AT ZANDVOORT?</h1>
       <p class="description">Find out which drivers featured in the Power Rankings top 10 with their performances at the Dutch Grand Prix.</p>
+      
+      <div class="f1-divider"></div>
+      
       <p class="timestamp">18 hours ago</p>
       
-      <img src="2232702938.jpg" alt="Power Rankings" class="image">
+      <img src="https://via.placeholder.com/600x340/15151F/FFFFFF/?text=DUTCH+GP+RANKINGS" alt="Power Rankings" class="image">
     </div>
 
     <!-- ADDITIONAL NEWS CARD -->
     <div class="card">
       <div class="tags">
-        <span class="tag">FP2</span>
+        <span class="tag breaking">BREAKING</span>
+        <span class="tag">PRACTICE</span>
         <span class="tag">NETHERLANDS</span>
-        <span class="tag">2023</span>
       </div>
       
       <h1 class="title">FP2: NORRIS SETS THE PACE AGAIN AHEAD OF DUTCH GRAND PRIX AS SESSION DISRUPTED BY TWO RED FLAGS</h1>
       <p class="description">Lando Norris topped the times in Free Practice 2 as the red flag was deployed twice at Zandvoort.</p>
+      
+      <div class="f1-divider"></div>
+      
       <p class="timestamp">8 hours ago</p>
       
-      <img src="2232702930.jpg" alt="F1 Car" class="image">
+      <img src="https://via.placeholder.com/600x340/15151F/FFFFFF/?text=FP2+ZANDVOORT" alt="F1 Car" class="image">
+    </div>
+
+    <!-- DRIVER STANDINGS CARD -->
+    <div class="card">
+      <div class="tags">
+        <span class="tag">STANDINGS</span>
+        <span class="tag">CHAMPIONSHIP</span>
+        <span class="tag">2023</span>
+      </div>
+      
+      <h1 class="title">Driver Standings After Dutch Grand Prix</h1>
+      <p class="description">Verstappen extends his lead after victory at home race. Check out the updated driver standings.</p>
+      
+      <div class="f1-divider"></div>
+      
+      <p class="timestamp">Updated 2 days ago</p>
+      
+      <img src="https://via.placeholder.com/600x200/15151F/FFFFFF/?text=DRIVER+STANDINGS" alt="Driver Standings" class="image">
     </div>
   </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2023 Formula One World Championship Limited. All rights reserved.</p>
+  </footer>
+
   <script>
-    // Simple script to show a message when a card is clicked
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', function() {
-        const title = this.querySelector('.title').textContent;
-        console.log(`Card clicked: ${title}`);
+    // Simple script untuk interaksi
+    document.addEventListener('DOMContentLoaded', function() {
+      // Menambahkan efek hover pada card
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.addEventListener('click', function() {
+          const title = this.querySelector('.title').textContent;
+          alert(`Opening: ${title}`);
+        });
       });
+
+      // Update waktu secara real-time
+      function updateTimestamps() {
+        const timestamps = document.querySelectorAll('.timestamp');
+        timestamps.forEach(timestamp => {
+          if (timestamp.textContent.includes('hours ago')) {
+            // Biarkan seperti aslinya untuk demo
+          }
+        });
+      }
+
+      updateTimestamps();
     });
   </script>
 </body>
