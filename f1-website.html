@@ -1,27 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Gaya tambahan untuk menyesuaikan dengan web-native.html */
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background-color: #e5e7eb;
+      color: #4b5563;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.375rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      line-height: 1.375;
+    }
+
+    .description {
+      color: #4b5563;
+      margin-bottom: 0.75rem;
+    }
+
+    .timestamp {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .image {
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      object-fit: cover;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
-<body class="container">
+<body>
+  <!-- HEADER -->
+  <header class="navbar">
+      <img src="2232702934.png" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#">Schedule</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="card">
-	<div class="tags">
-		<span class="tag">POWER RANKIGS</span>
-		<span class="tag">F1 UNLOCKED</span>
-		<span class="tag">2025</span>
-	</div>
+  <!-- CONTENT CONTAINER -->
+  <div class="container">
+    <!-- SCHEDULE CARD -->
+    <div class="card">
+      <div class="tags">
+        <span class="tag">R16</span>
+        <span class="tag">05 - 07 SEP</span>
+        <span class="tag">Italy</span>
+      </div>
+      <h1 class="title">Italian Grand Prix</h1>
+      <p class="description">Round 16 of the Formula 1 season takes place in Monza, Italy.</p>
+      <p class="timestamp">Upcoming event</p>
+    </div>
 
-	<h1 class="title">POWER RANKINGS: WHO IMPRESSED OUR JUDGES AMID THE DRAMA AT ZANDVOORT</h1>
+    <!-- ARTICLE CARD -->
+    <div class="card">
+      <div class="tags">
+        <span class="tag">Power Rankings</span>
+        <span class="tag">Zandvoort</span>
+        <span class="tag">Dutch GP</span>
+      </div>
+      <h1 class="title">POWER RANKINGS: WHO IMPRESSED OUR JUDGES AMID THE DRAMA AT ZANDVOORT?</h1>
+      <p class="description">Find out which drivers featured in the Power Rankings top 10 with their performances at the Dutch Grand Prix.</p>
+      <p class="timestamp">18 hours ago</p>
+      <img src="2232702930.jpg" alt="Power Rankings" class="image">
+    </div>
+  </div>
 
-	<p class="description">Find out which drivers featured in the Power Rankings top 10 with their perfomances at the Dutch Grand Prix</p>
-
-	<p class="timestamp">18 hours ago</p>
-
-	<img src="2232702938.jpg" alt="Drivers" class="image">
-
-</div>
+  <script src="script.js"></script>
 </body>
 </html>
