@@ -9,8 +9,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 800px;   /* desktop max width */
-  margin: 0 auto;     /* center horizontal */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Card Styling */
@@ -76,25 +76,11 @@ li {
 
 /* Responsive desktop */
 @media (min-width: 768px) {
-  .title {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-  .description {
-    font-size: 1.125rem;
-  }
-  .timestamp {
-    font-size: 1rem;
-  }
-}
-
-
-@media (min-width: 768px) {
   .tags {
-    justify-content: flex-start; /* tetap di kiri */
+    justify-content: flex-start;
   }
   .tag {
-    font-size: 0.95rem;   /* lebih besar */
+    font-size: 0.95rem;
     padding: 0.35rem 1rem;
   }
   .title {
@@ -108,3 +94,4 @@ li {
     font-size: 1rem;
   }
 }
+
