@@ -41,7 +41,7 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  line-height: 1.375rem;
+  line-height: 1.75rem;
 }
 
 .description {
@@ -61,14 +61,13 @@ body {
   width: 100%;
   object-fit: cover;
 }
-	
 
 li {
-  position: inline;
-  margin: 0;
-  padding: 0;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .ruang{
-  padding-top: 2rem;	
+  padding-top: 2rem; 
 }
+

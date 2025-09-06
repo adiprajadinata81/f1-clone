@@ -4,7 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>F1 News Native</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styling */
+    body {
+      background-color: #f9fafb;
+      color: #1f2937;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 800px;
+      }
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background-color: #e5e7eb;
+      color: #4b5563;
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.375rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      line-height: 1.75rem;
+    }
+
+    .description {
+      color: #4b5563;
+      margin-bottom: 0.75rem;
+    }
+
+    .timestamp {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .image {
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    li {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .ruang {
+      padding-top: 2rem; 
+    }
+  </style>
 </head>
 <body class="container">
 
@@ -32,19 +112,20 @@
 
     <!-- Image -->
     <img src="2232702938.jpg" 
-         alt="Drivers" 
+         alt="Formula 1 drivers at Dutch Grand Prix" 
          class="image">
 
     <p class="description">It was a dramatic weekend at Zandvoort, with Oscar Piastri winning, team mate Lando Norris retiring, Isack Hadjar scoring a maiden podium finish and Ferrari suffering a double DNF. So, who impressed our judges through it all? Check out the latest scores and overall leaderboard below...</p>
 
 
-    <h1 class="title">HOW IT WORKS</h1>
+    <h2 class="title">HOW IT WORKS</h2>
 
-	    <ul>
-		    <li>Our five-judge panel assess each driver after every Grand Prix and score them out of 10 according to their performance across the weekend – taking machinery out of the equation</li>
-		    <li class="ruang">Our experts’ scores are then averaged out to produce a race score – with those scores then tallied up across the season on our overall Power Rankings Leaderboard (at the bottom of the page)</li>
-	    </ul>
+    <ul>
+      <li>Our five-judge panel assess each driver after every Grand Prix and score them out of 10 according to their performance across the weekend – taking machinery out of the equation</li>
+      <li class="ruang">Our experts’ scores are then averaged out to produce a race score – with those scores then tallied up across the season on our overall Power Rankings Leaderboard (at the bottom of the page)</li>
+    </ul>
 
-</div>
+  </div>
 </body>
 </html>
+
