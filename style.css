@@ -5,12 +5,13 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 480px;
 }
 
 /* Card Styling */
@@ -63,7 +64,11 @@ body {
 	
 
 li {
-  position: inline-block;
+  position: inline;
   margin: 0;
   padding: 0;
+}
+
+.ruang{
+  padding-top: 2rem;	
 }
