@@ -3,7 +3,7 @@ body {
   color: #1f2937;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 6rem;
+  padding: 2rem;
 }
 
 .container {
@@ -63,8 +63,9 @@ body {
 }
 
 li {
-  display: inline-block;
-  margin-bottom: 0.5rem;
+  display: block; /* ubah jadi block biar rapi */
+  margin-bottom: 1rem; /* jarak antar item lebih besar */
+  line-height: 1.6; /* bikin teks list lebih nyaman */
 }
 
 .ruang {
