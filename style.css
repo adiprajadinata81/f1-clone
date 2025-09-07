@@ -3,7 +3,7 @@ body {
   color: #1f2937;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 2rem;
+  padding: 6rem;
 }
 
 .container {
@@ -45,6 +45,7 @@ body {
 .description {
   color: #4b5563;
   margin-bottom: 0.75rem;
+  line-height: 1.7; /* tambah line-height biar lebih nyaman */
 }
 
 .timestamp {
@@ -68,6 +69,7 @@ li {
 
 .ruang {
   padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -84,6 +86,7 @@ li {
   }
   .description {
     font-size: 1.125rem;
+    line-height: 1.8; /* lebih lega untuk layar besar */
   }
   .timestamp {
     font-size: 1rem;
