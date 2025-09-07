@@ -58,6 +58,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   object-fit: cover;
+  margin: 2rem 0; /* kasih jarak atas & bawah */
 }
 
 li {
@@ -67,7 +68,6 @@ li {
 
 .ruang {
   padding-top: 1rem;
-  padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -88,10 +88,5 @@ li {
   .timestamp {
     font-size: 1rem;
   }
-}
-
-.isack{
-  padding-top: 2rem;
-  padding-bottom: 2rem;	
 }
 
