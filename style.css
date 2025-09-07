@@ -12,7 +12,6 @@ body {
   margin: 0 auto;
 }
 
-/* Card Styling */
 .card {
   background-color: #fff;
   border-radius: 12px;
@@ -61,17 +60,16 @@ body {
   object-fit: cover;
 }
 
-/* List */
 li {
   display: inline-block;
   margin-bottom: 0.5rem;
 }
 
 .ruang {
-  padding-top: 2rem; 
+  padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 
-/* Responsive desktop */
 @media (min-width: 768px) {
   .tags {
     justify-content: flex-start;
@@ -92,3 +90,6 @@ li {
   }
 }
 
+.isack{
+  padding-top: 2rem;
+}
