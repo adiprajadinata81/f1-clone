@@ -62,6 +62,10 @@ body {
   margin: 2rem 0; /* kasih jarak atas & bawah */
 }
 
+ul {
+  padding-left: 1.5rem; /* indentasi list */
+}
+
 li {
   display: block; /* ubah jadi block biar rapi */
   margin-bottom: 1rem; /* jarak antar item lebih besar */
